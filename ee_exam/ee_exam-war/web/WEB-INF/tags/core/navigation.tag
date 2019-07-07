@@ -20,20 +20,6 @@
                 </jsp:attribute>
             </core:link>
         </li>
-        <li>
-            <core:link location="/projects">
-                <jsp:attribute name="title">
-                    <fmt:message key="menu.projects"/>
-                </jsp:attribute>
-            </core:link>
-        </li>
-        <li>
-            <core:link location="/articles">
-                <jsp:attribute name="title">
-                    <fmt:message key="menu.articles"/>
-                </jsp:attribute>
-            </core:link>
-        </li>
         <li class="pull-right">
             <c:choose>
                 <c:when test="${not empty sessionScope.user}">

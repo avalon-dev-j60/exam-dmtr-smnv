@@ -6,8 +6,8 @@ import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
-import ru.avalon.java.blog.helpers.RedirectHelper;
-import ru.avalon.java.blog.services.AuthService;
+import ru.avalon.java.blog.helpers.*;
+import ru.avalon.java.blog.services.*;
 
 @WebServlet ("/sign-out")
 public class SignOutServlet extends HttpServlet {

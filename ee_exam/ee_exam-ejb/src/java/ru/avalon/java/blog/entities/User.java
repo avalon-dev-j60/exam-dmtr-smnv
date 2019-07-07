@@ -3,10 +3,8 @@ package ru.avalon.java.blog.entities;
 import java.io.*;
 import javax.persistence.*;
 
-@NamedQueries({
-                         @NamedQuery(name = "find-user-by-email",
-                                     query = "SELECT user FROM Users AS user WHERE user.email = :email")
-                        })
+@NamedQueries({@NamedQuery(name = "find-user-by-email",
+                           query = "SELECT user FROM Users AS user WHERE user.email = :email")})
 @Entity(name = "Users")
 public class User implements Serializable {
 
@@ -19,19 +17,23 @@ public class User implements Serializable {
     }
 
     public User(String email, String password) {
+        
         this.email = email;
         this.password = password;
     }
 
     public String getEmail() {
+        
         return email;
     }
 
     public String getPassword() {
+        
         return password;
     }
 
     public void setPassword(String password) {
+        
         this.password = password;
     }
 }

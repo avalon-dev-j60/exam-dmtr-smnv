@@ -1,11 +1,10 @@
 package ru.avalon.java.blog.servlets;
 
 import java.io.*;
-import javax.inject.*;
+import javax.inject.Inject;
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
-
 import ru.avalon.java.blog.exceptions.*;
 import ru.avalon.java.blog.helpers.*;
 import ru.avalon.java.blog.services.*;

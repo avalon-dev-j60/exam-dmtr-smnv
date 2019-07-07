@@ -5,7 +5,6 @@ import javax.inject.Inject;
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
-
 import ru.avalon.java.blog.exceptions.*;
 import ru.avalon.java.blog.helpers.*;
 import ru.avalon.java.blog.services.*;
@@ -19,18 +18,20 @@ public class SignInServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
         if (authService.isSignedIn()) {
             RedirectHelper.redirectBack(request, response);
         } else {
-            request.getRequestDispatcher(JSP)
-                      .forward(request, response);
+            request.getRequestDispatcher(JSP).forward(request, response);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        
         try {
             authService.signIn(email, password);
             RedirectHelper.localRedirect(request, response, "/");
