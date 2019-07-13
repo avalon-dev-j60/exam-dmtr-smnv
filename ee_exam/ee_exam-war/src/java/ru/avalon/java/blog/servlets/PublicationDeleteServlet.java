@@ -13,7 +13,7 @@ import ru.avalon.java.blog.exceptions.*;
 import static ru.avalon.java.blog.helpers.RedirectHelper.*;
 import static ru.avalon.java.blog.helpers.Validation.*;
 
-@WebServlet("/publications/delete")
+@WebServlet("/publication/delete")
 public class PublicationDeleteServlet extends HttpServlet {
 
     @EJB

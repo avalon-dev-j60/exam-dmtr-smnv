@@ -13,7 +13,7 @@ import ru.avalon.java.blog.exceptions.*;
 import static ru.avalon.java.blog.helpers.RedirectHelper.*;
 import static ru.avalon.java.blog.helpers.Validation.*;
 
-@WebServlet("/publications/edit")
+@WebServlet("/publication/edit")
 public class PublicationEditServlet extends HttpServlet {
 
     private static final String JSP = "/WEB-INF/pages/publications/edit.jsp";
